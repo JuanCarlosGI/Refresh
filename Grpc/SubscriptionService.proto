@@ -1,0 +1,12 @@
+﻿syntax = "proto3";
+
+service WebhookService {
+  rpc Subscribe (SubscribeRequest) returns (stream UpdateReply);
+}
+
+message UpdateReply {
+  string repo = 1;
+}
+
+message SubscribeRequest {
+}
